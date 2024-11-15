@@ -1,3 +1,6 @@
+import time
+from os import times
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
@@ -24,9 +27,10 @@ driver_chrome.get(base_url)
 driver_chrome.maximize_window()
 
 # выбирает чек-бокс
-check_box = driver_chrome.find_element(By.XPATH, "//span[@class='rct-checkbox']")
+check_box = driver_chrome.find_element(By.XPATH, "//label[@for='tree-node-home']")
 check_box.click()
 
+time.sleep(2)
 # проверяет чек-бокс
-print(check_box.is_selected())
+print(check_box.is_selected())# метод is_selected не работает на данном сайте
 print("Чек-бокс выбран")
