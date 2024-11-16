@@ -26,7 +26,7 @@ driver_chrome.get(base_url)
 driver_chrome.maximize_window()
 
 # выбирает чек-бокс
-check_box = driver_chrome.find_element(By.XPATH, "//label[@for='tree-node-home']")
+check_box = driver_chrome.find_element(By.XPATH, "//span[@class='rct-checkbox']")
 check_box.click()
 
 time.sleep(2)
